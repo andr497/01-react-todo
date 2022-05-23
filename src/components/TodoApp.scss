@@ -1,0 +1,84 @@
+.todo {
+    padding: 10px;
+    background-color: #fff;
+    animation: fadeInRight 300ms ease-out;
+    &Container{
+        width: 500px;
+        margin: 100px auto;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    &CreateForm {
+        display: flex;
+        gap: 5px;
+    }
+    &Input {
+        flex-grow: 1;
+        width: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        border: solid 1px #999;
+    }
+    &Title {
+        flex: 1;
+        font-size: 20px;
+    }
+    &UpdateForm, &Info {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+.button {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    &Create {
+        background-color: rgb(26, 76, 169);
+        &:hover {
+            background-color: rgb(15, 40, 88);
+        }
+        &:disabled {
+            background-color: rgb(140, 168, 219);
+            cursor: not-allowed;
+        }
+    }
+    &Edit {
+        background-color: rgb(45, 150, 32);
+        &:hover {
+            background-color: rgb(26, 88, 18);
+        }
+        &:disabled {
+            background-color: rgb(127, 221, 115);
+            cursor: not-allowed;
+        }
+    }
+    &Finish {
+        color: black;
+        background-color: rgb(253, 192, 60);
+        &:hover {
+            background-color: rgb(177, 121, 2);
+        }
+    }
+    &Delete {
+        background-color: rgb(231, 37, 37);
+        &:hover {
+            background-color: rgb(146, 27, 27);
+        }
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
